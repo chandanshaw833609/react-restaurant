@@ -46,13 +46,14 @@ const Header = () => {
                     <Person2Icon />
                   </div>
 
-                  <Link to="/" className="flex items-center text-xl">
+                  <Link to="/" className="flex items-center text-xl gap-2">
                     {/* {getDecodedToken().sub} */}
                     {name}
+                    <ShoppingCartIcon />
                   </Link>
                 </div>
               )}
-              {isLoggedIn ? (
+              {isLoggedIn && (
                 // <button
                 //   onClick={handleLogout}
                 //   className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
@@ -66,14 +67,15 @@ const Header = () => {
                 >
                   <ShoppingCartIcon />
                 </Link>
-              ) : (
-                <Link
-                  to="/login"
-                  className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
-                >
-                  Login
-                </Link>
-              )}
+              // ) : (
+              //   <Link
+              //     to="/login"
+              //     className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+              //   >
+              //     Login
+              //   </Link>
+              // 
+            )}
             </div>
             {isLoggedIn && (
               <button
