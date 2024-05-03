@@ -13,7 +13,7 @@ const RegisterUser = () => {
   const dispatch = useDispatch()
   const [error, setError] = useState(false)
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
     email: '',
     password: '',
   })
@@ -55,8 +55,8 @@ const RegisterUser = () => {
             <label htmlFor="name">Name</label>
             <input 
             type="text"
-            name='name'
-            value={formData.name}
+            name='firstName'
+            value={formData.firstName}
             onChange={handleInputChange}
             className='border w-full block rounded-sm ring-gray-300 ring-inset p-1 ring-1'
             />
