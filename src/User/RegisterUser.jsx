@@ -33,7 +33,7 @@ const RegisterUser = () => {
         "password":formData.password,
       }
       const response = await login(loginData);
-      dispatch(authLogin(response.data.token));
+      dispatch(authLogin({"token" : response.data.token, "name" :  response.data.name}));
       navigate("/")
       setIsLoading(false)
       setError(false)
