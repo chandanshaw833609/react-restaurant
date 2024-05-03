@@ -41,7 +41,7 @@ const Header = () => {
 
             <div className="flex items-center lg:order-2 gap-4">
               {isLoggedIn &&  (
-                <div>
+                <div className="flex gap-2">
                 <div className="flex items-center gap-2 border border-1 rounded-md py-1 px-2">
                   <div className="border border-black rounded-full m-auto flex items-center justify-center">
                     <Person2Icon />
