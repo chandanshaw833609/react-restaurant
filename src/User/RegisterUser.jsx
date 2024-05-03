@@ -28,11 +28,13 @@ const RegisterUser = () => {
     setIsLoading(true)
     try {
       await signup(formData);
+      console.log(formData);
       const loginData = {
         "email":formData.email,
         "password":formData.password,
       }
       const response = await login(loginData);
+      console.log(loginData);
       dispatch(authLogin({"token" : response.data.token, "name" :  response.data.name}));
       navigate("/")
       setIsLoading(false)
