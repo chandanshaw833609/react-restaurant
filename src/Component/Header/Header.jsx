@@ -53,7 +53,7 @@ const Header = () => {
                   </Link>
                 </div>
               )}
-              {isLoggedIn && (
+              {/* {isLoggedIn && (
                 // <button
                 //   onClick={handleLogout}
                 //   className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
@@ -75,8 +75,7 @@ const Header = () => {
               //     Login
               //   </Link>
               // 
-            )}
-            </div>
+            )} */}
             {isLoggedIn && (
               <button
                 to="/l"
@@ -85,6 +84,8 @@ const Header = () => {
                 Logout
               </button>
             )}
+            </div>
+            
             <div
               className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
               id="mobile-menu-2"
