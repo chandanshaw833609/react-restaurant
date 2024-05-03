@@ -34,11 +34,7 @@ const Header = () => {
         <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <Link  className="flex items-center">
-              <img
-                src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-                className="mr-3 h-12"
-                alt="Logo"
-              />
+              <span className="font-bold text-3xl">Trip</span><span className="text-orange-500 font-bold text-3xl">ti</span>
             </Link>
             
 
