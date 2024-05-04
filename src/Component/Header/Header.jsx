@@ -32,14 +32,14 @@ const Header = () => {
   return (
     <div>
       <header className="shadow sticky z-50 top-0">
-        <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
+        <nav className="bg-white border-gray-200 px-1 lg:px-6 py-2.5">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <Link className="flex items-center">
               <span className="font-bold text-3xl">Trip</span>
               <span className="text-orange-500 font-bold text-3xl">ti</span>
             </Link>
 
-            <div className="flex items-center lg:order-2 gap-4">
+            <div className="flex justify-evenly items-center lg:order-2 gap-4">
               {isLoggedIn &&  (
                 <div className="flex gap-2 place-items-center items-center">
                 <div className="flex items-center gap-2 border border-1 rounded-md py-1 px-2">
