@@ -53,7 +53,7 @@ const Header = () => {
                   </Link>
                   
                 </div>
-                <div>
+                <div className="mx-1">
                   <Link to={"/cart"}>
                     <ShoppingCartIcon />
                   </Link>
