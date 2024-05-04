@@ -25,8 +25,11 @@ const Header = () => {
   }, [isLoggedIn]);
 
   const handleLogout = () => {
-    dispatch(logout());
-    navigate("/login");
+    const res = confirm("Do you want to logout?")
+    if (res) {
+      dispatch(logout());
+      navigate("/login");
+    } 
   };
 
   return (
