@@ -31,7 +31,10 @@ const LoginUser = () => {
       dispatch(authLogin({"token" : response.data.token, "name" :  response.data.name}));
       const decoded_token = jwtDecode(localStorage.getItem("token"));
       if(decoded_token?.role?.authority === 'ROLE_ADMIN') navigate("/admin")
-      else navigate("/")
+      else {
+        navigate("/")
+        location.reload()
+      } 
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
