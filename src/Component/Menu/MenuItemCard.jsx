@@ -79,7 +79,7 @@ const MenuItemCard = () => {
                 {orderItems?.includes(menuItem.id) ? (
                   <button
                     disabled // Disable button if loading for this item
-                    className="bg-orange-400 cursor-pointer h-10 w-16 text-white my-1 rounded-md font-bold text-center"
+                    className="bg-orange-400 cursor-pointer h-10 w-20 text-white my-1 rounded-md font-bold text-center"
                   >
                     Added
                   </button>
