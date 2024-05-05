@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { addOrderItem, getCartItems, getMenuItems } from "../../Backend/config";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Loading from "../Loading";
 import { useQuery } from "react-query";
 import { CircularProgress } from "@mui/material";
@@ -10,6 +10,8 @@ const MenuItemCard = () => {
   const [loadingItemId, setLoadingItemId] = useState(null);
   const [menuItems, setMenuItems] = useState([]);
   const [orderItems, setOrderItems] = useState([]);
+  const navigate = useNavigate()
+  const isLoggedIn = localStorage.getItem("isLoggedIn")
 
   const { isLoading, data: itemsData } = useQuery(
     `menuItemData-${menutitle}`,
@@ -23,6 +25,7 @@ const MenuItemCard = () => {
 
   const addOrder = async (item) => {
     try {
+      if (!isLoggedIn) navigate("/login")
       setLoadingItemId(item.id);
       await addOrderItem(item);
       setOrderItems((prev) => [...prev, item.id]);
