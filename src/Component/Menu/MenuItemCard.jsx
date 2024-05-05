@@ -79,23 +79,23 @@ const MenuItemCard = () => {
                 {orderItems?.includes(menuItem.id) ? (
                   <button
                     disabled // Disable button if loading for this item
-                    className="bg-orange-400 cursor-pointer text-white md:py-2 md:px-3 py-1 my-1 px-1 rounded-md font-bold text-center"
+                    className="bg-orange-400 cursor-pointer h-10 w-16 text-white md:py-2 md:px-3 py-1 my-1 px-1 rounded-md font-bold text-center"
                   >
                     Added
                   </button>
                 ) : loadingItemId === menuItem.id ? (
                   <button
                     disabled // Disable button if loading for this item
-                    className="bg-orange-400 cursor-pointer text-white md:py-2 md:px-3 py-1 my-1 px-3 rounded-md font-bold text-center"
+                    className="bg-orange-400 cursor-pointer h-10 w-20 text-white md:py-2 md:px-3 py-1 my-1 px-3 rounded-md font-bold text-center"
                   >
                     <div>
-                      <CircularProgress color="info" size={14} /> Adding
+                      <CircularProgress color="info" size={14} />
                     </div>
                   </button>
                 ) : (
                   <button
                     onClick={() => addOrder(menuItem)}
-                    className="bg-orange-600 cursor-pointer text-white md:py-2 md:px-3 py-1 my-1 px-3 rounded-md font-bold text-center"
+                    className="bg-orange-600 cursor-pointer text-white md:py-2 md:px-3 py-1 my-1 px-3 h-10 w-20 rounded-md font-bold text-center"
                   >
                     <div>
                       Add+
