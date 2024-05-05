@@ -18,12 +18,12 @@ const MenuTitleCard = () => {
   }
 
   return (
-    <div className="my-10 grid grid-cols-2 md:grid-cols-4 place-items-center">
+    <div className="my-5 grid grid-cols-2 gap-5  md:grid-cols-4">
       {menuTitles?.map((menuTitle) => (
         <Link
           key={menuTitle.id}
           to={`/${menuTitle.id}/menu-items`}
-          className="md:w-72 border bordder-2 rounded-xl w-40 h-60 md:h-96 shadow-md my-5 overflow-hidden"
+          className="border bordder-2 rounded-xl h-60 md:h-96 shadow-md my-5 overflow-hidden"
         >
           <div className="h-4/6 overflow-hidden">
             <img

@@ -54,14 +54,14 @@ const MenuItemCard = () => {
   }
 
   return (
-    <div className="my-10 grid  grid-cols-2 md:grid-cols-4 place-items-center">
+    <div className="my-5 grid  grid-cols-2 gap-5 md:grid-cols-4">
       {menuItems?.map((menuItem) => {
         return (
           <div
             key={menuItem.id}
-            className="md:w-72 border
+            className=" border
                   bordder-2 rounded-xl
-                  w-40 h-60 md:h-96
+                  h-60 md:h-96
                   shadow-md my-5 overflow-hidden"
           >
             <div className="h-3/5 overflow-hidden">
