@@ -29,6 +29,7 @@ const Header = () => {
     if (res) {
       dispatch(logout());
       navigate("/login");
+      location.reload()
     } 
   };
 

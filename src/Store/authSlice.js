@@ -20,7 +20,7 @@ const authSlice = createSlice({
         localStorage.removeItem("token");
         localStorage.removeItem("userData");
         localStorage.removeItem("isLoggedIn");
-        window.location.reload()
+        // window.location.reload()
       },
     },
   });
